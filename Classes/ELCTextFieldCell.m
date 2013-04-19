@@ -47,7 +47,8 @@
 		_rightTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 		[_rightTextField setDelegate:self];
 		[_rightTextField setFont:[UIFont systemFontOfSize:17]];
-		
+		[_rightTextField setClearButtonMode:UITextFieldViewModeWhileEditing];
+        
         //Use Done for all of them.
 		[_rightTextField setReturnKeyType:UIReturnKeyDone];
 		
@@ -64,8 +65,8 @@
 	CGRect origFrame = self.contentView.frame;
 	if (_leftLabel.text != nil) {
         _leftLabel.hidden = NO;
-		_leftLabel.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, 125, origFrame.size.height-1);
-		_rightTextField.frame = CGRectMake(origFrame.origin.x+130, origFrame.origin.y, origFrame.size.width-140, origFrame.size.height);
+		_leftLabel.frame = CGRectMake(origFrame.origin.x, origFrame.origin.y, 100, origFrame.size.height-1);
+		_rightTextField.frame = CGRectMake(origFrame.origin.x+105, origFrame.origin.y, origFrame.size.width-115, origFrame.size.height);
 	} else {
 		_leftLabel.hidden = YES;
 		NSInteger imageWidth = 0;
